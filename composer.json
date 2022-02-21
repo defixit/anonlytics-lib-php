@@ -1,0 +1,28 @@
+{
+  "name": "defixit/anonlytics-lib-php",
+  "description": "European anonymized website analytics (GDPR)",
+  "keywords": [
+    "anonlytics",
+    "analytics",
+    "anonimize",
+    "gdpr"
+  ],
+  "type": "library",
+  "require": {
+    "php": ">=7.4",
+    "ext-curl": "*",
+    "ext-json": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "DeFixIT\\Anonlytics\\": "src/"
+    }
+  },
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Erwin Dirks",
+      "email": "erwin@defixit.com"
+    }
+  ]
+}
