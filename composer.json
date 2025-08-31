@@ -4,18 +4,30 @@
   "keywords": [
     "anonlytics",
     "analytics",
-    "anonimize",
-    "gdpr"
+    "anonymize",
+    "gdpr",
+    "privacy",
+    "tracking"
   ],
   "type": "library",
   "require": {
-    "php": ">=7.4",
+    "php": ">=8.3",
     "ext-curl": "*",
     "ext-json": "*"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^11.0",
+    "phpstan/phpstan": "^1.10",
+    "squizlabs/php_codesniffer": "^3.8"
   },
   "autoload": {
     "psr-4": {
       "DeFixIT\\Anonlytics\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "DeFixIT\\Anonlytics\\Tests\\": "tests/"
     }
   },
   "license": "MIT",
@@ -24,5 +36,17 @@
       "name": "Erwin Dirks",
       "email": "erwin@defixit.com"
     }
-  ]
+  ],
+  "config": {
+    "sort-packages": true,
+    "allow-plugins": {
+      "composer/package-versions-deprecated": true
+    }
+  },
+  "scripts": {
+    "test": "phpunit",
+    "phpstan": "phpstan analyse",
+    "cs-check": "phpcs",
+    "cs-fix": "phpcbf"
+  }
 }
